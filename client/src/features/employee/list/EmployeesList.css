@@ -1,0 +1,117 @@
+.employees-list {
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.employees-list-top {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.employees-list-add-button {
+    color: var(--textSoft);
+    cursor: pointer;
+}
+
+.employees-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.employee-card {
+    background-color: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 80vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    align-items: center;
+}
+
+.employee-card-header {
+    margin: 10px;
+}
+
+.employee-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.employee-card-body {
+    margin: 10px;
+}
+
+.employee-card-footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.employee-card-button {
+    padding: 5px 10px;
+    color: var(--textSoft);
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Varela Round", sans-serif;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .employee-card {
+        grid-template-columns: 1fr;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .employees-list {
+        padding: 15px;
+    }
+
+    .employee-card {
+        padding: 15px;
+        min-width: 100%;
+    }
+
+    .employee-card-button {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .employee-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .employees-list {
+        padding: 10px;
+    }
+
+    .employee-card {
+        padding: 10px;
+        min-width: 100%;
+    }
+
+    .employee-card-button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .employee-name {
+        font-size: 14px;
+    }
+}

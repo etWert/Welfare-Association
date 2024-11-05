@@ -1,0 +1,84 @@
+/* loginPage.css */
+
+/* סגנונות כלליים */
+.login-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--textSoft);
+}
+
+.login-page-form {
+    background-color: var(--bgSoft);
+    padding: 50px;
+    border-radius: 10px;
+    width: 500px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.login-page-form input {
+    width: 100%;
+    padding: 30px;
+    border: solid 2px var(--text);
+    border-radius: 5px;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.login-page-form button {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--text);
+    color: var(--textSoft);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: large;
+}
+
+/* מסכים גדולים (לדסקטופ) */
+@media (min-width: 1024px) {
+    .login-page-form {
+        width: 500px;
+        padding: 50px;
+    }
+
+    .login-page-form input, 
+    .login-page-form button {
+        padding: 30px;
+    }
+}
+
+/* מסכים בינוניים (טאבלטים) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .login-page-form {
+        width: 400px;
+        padding: 40px;
+    }
+
+    .login-page-form input, 
+    .login-page-form button {
+        padding: 25px;
+    }
+}
+
+/* מסכים קטנים (מובייל) */
+@media (max-width: 767px) {
+    .login-page-form {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .login-page-form input, 
+    .login-page-form button {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,156 @@
+.single-employee-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-employee-info {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    height: max-content;
+    background-color: var(--text);
+    color: var(--textSoft);
+    font-size: large;
+}
+
+.single-employee-form-container {
+    flex: 3;
+    background-color: var(--bgSoft);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-employee-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-employee-form input,
+.single-employee-form select {
+    padding: 20px;
+    border: solid 2px #2e374a;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 10px 0px;
+    border-radius: 5px;
+}
+
+.single-employee-form label {
+    font-size: 12px;
+}
+
+.single-employee-form button {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--text);
+    color: var(--textSoft);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.success-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.success-message {
+    font-size: 24px;
+    color: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .single-employee-form-container {
+        padding: 15px;
+    }
+
+    .single-employee-form input,
+    .single-employee-form button {
+        padding: 15px;
+    }
+
+    .single-employee-info {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-employee-container {
+        padding: 15px;
+        gap: 30px;
+    }
+
+    .single-employee-info {
+        font-size: medium;
+    }
+
+    .single-employee-form-container {
+        padding: 10px;
+    }
+
+    .single-employee-form input,
+    .single-employee-form button {
+        padding: 10px;
+    }
+
+    .single-employee-form label {
+        font-size: 10px;
+    }
+
+    .success-message {
+        font-size: 20px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .single-employee-container {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .single-employee-info {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .single-employee-form-container {
+        padding: 5px;
+    }
+
+    .single-employee-form input,
+    .single-employee-form button {
+        padding: 8px;
+    }
+
+    .single-employee-form label {
+        font-size: 8px;
+    }
+
+    .success-message {
+        font-size: 18px;
+        padding: 10px;
+    }
+}

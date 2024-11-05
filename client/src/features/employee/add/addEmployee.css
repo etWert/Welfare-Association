@@ -1,0 +1,88 @@
+.add-employee-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 50px;
+}
+
+.add-employee-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.add-employee-form input,
+.add-employee-form select {
+    padding: 20px;
+    border: 2px solid #2e374a;
+    border-radius: 5px;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 10px 0px;
+    width: calc(50% - 20px);
+}
+
+.add-employee-form button {
+    width: 100%;
+    padding: 20px;
+    color: var(--textSoft);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: var(--text);
+}
+
+.add-employee-info {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    height: max-content;
+    background-color: var(--text);
+    color: var(--textSoft);
+    font-size: large;
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .add-employee-form input,
+    .add-employee-form select {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .add-employee-container {
+        padding: 15px;
+    }
+
+    .add-employee-form input,
+    .add-employee-form select,
+    .add-employee-form button {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-employee-container {
+        padding: 10px;
+    }
+
+    .add-employee-form input,
+    .add-employee-form select,
+    .add-employee-form button {
+        padding: 10px;
+    }
+
+    .add-employee-info {
+        font-size: medium;
+    }
+}

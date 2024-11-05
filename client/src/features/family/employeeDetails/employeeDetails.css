@@ -1,0 +1,97 @@
+.employee-details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bgSoft);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.employee-details-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--textSoft);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.employee-details-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.employee-details-content p {
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.contact-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    color: var(--text);
+}
+
+/* Responsive styles */
+
+/* Large screens (above 1200px) */
+@media (max-width: 1200px) {
+    .employee-details-title {
+        font-size: 22px;
+    }
+
+    .employee-details-content {
+        font-size: 15px;
+    }
+
+    .employee-details-container {
+        padding: 15px;
+    }
+}
+
+/* Medium screens (768px to 1200px) */
+@media (max-width: 768px) {
+    .employee-details-title {
+        font-size: 20px;
+    }
+
+    .employee-details-content {
+        font-size: 14px;
+    }
+
+    .employee-details-container {
+        padding: 10px;
+    }
+
+    .contact-icon {
+        margin-right: 3px;
+    }
+}
+
+/* Small screens (below 768px) */
+@media (max-width: 480px) {
+    .employee-details-title {
+        font-size: 18px;
+    }
+
+    .employee-details-content {
+        font-size: 13px;
+    }
+
+    .employee-details-container {
+        padding: 8px;
+        margin: 10px auto;
+    }
+
+    .contact-icon {
+        margin-right: 2px;
+    }
+}
