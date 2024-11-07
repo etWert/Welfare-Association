@@ -1,6 +1,6 @@
 import './App.css';
-// import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom"
-import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom"
+// import { HashRouter as Router, Routes, Route, Outlet } from "react-router-dom";
 
 import SiteLayout from './components/layout/site/SiteLayout';
 import DashLayout from './components/layout/dash/DashLayout';
