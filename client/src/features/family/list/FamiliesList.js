@@ -71,7 +71,7 @@ const FamiliesList = () => {
     return (
         <div className="families-list">
             <div className="families-list-top">
-                <Search placeholder="חיפוש לפי שם משפחה" />
+                <Search placeholder="חיפוש לפי שם" />
                 <button className={activeFilter === 'waiting' ? 'active' : ''} onClick={() => { setWaiting(true); setApproved(false); setNazig(role === 'נציג'); setAll(false); setActiveFilter('waiting'); }}>הצג רק משפחות ממתינות לטיפול</button>
                 <button className={activeFilter === 'approved' ? 'active' : ''} onClick={() => { setApproved(true); setWaiting(false); setNazig(role === 'נציג'); setAll(false); setActiveFilter('approved'); }}>הצג רק משפחות מאושרות</button>
                 {role === 'נציג' && <button className={activeFilter === 'nazig' ? 'active' : ''} onClick={() => { setNazig(true); setWaiting(false); setApproved(false); setAll(false); setActiveFilter('nazig'); }}> הצג את כל המשפחות שבטיפולי</button>}
