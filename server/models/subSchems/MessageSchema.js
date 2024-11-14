@@ -7,7 +7,12 @@ const MessageSchema = new mongoose.Schema({
     read_status: {
         type: Boolean,
         default: false,
-    }
+    },
+    sender:{
+        type: String,
+        enum:["a","b"],
+        require:true,   
+    },
 }, {
     timestamps: true
 })

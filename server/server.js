@@ -16,6 +16,7 @@ connectDB()
 app.use("/api/auth", require("./routes/AuthRoute"))
 app.use("/api/family", require("./routes/FamilyRoute"))
 app.use("/api/employee", require("./routes/EmployeeRoute"))
+app.use("/api/conversation", require("./routes/ConversationRoute"))
 
 app.get("/", (req, res) => {
     res.send("home page")

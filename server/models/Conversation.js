@@ -3,18 +3,20 @@ const MessageSchema = require("./subSchems/MessageSchema")
 
 const conversationSchema = new mongoose.Schema({
     messages: [MessageSchema],
-    sender_id:{
+    interlocutor_a_id:{
         type: mongoose.Schema.Types.ObjectId,
+        require:true,
     },
-    sender_type:{
+    interlocutor_a_type:{
         type: String,
         enum:["Family","Employee"],
         require:true,
     },
-    receiver_id:{
+    interlocutor_b_id:{
         type: mongoose.Schema.Types.ObjectId,
+        require:true,
     },
-    receiver_type:{
+    interlocutor_b_type:{
         type: String,
         enum:["Family","Employee"],
         require:true,
@@ -23,4 +25,4 @@ const conversationSchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('Employee', conversationSchema)
+module.exports = mongoose.model('Conversation', conversationSchema)
