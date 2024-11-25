@@ -8,6 +8,7 @@ import { FaFile, FaCirclePlus, FaRegPenToSquare } from "react-icons/fa6";
 import { MdCancel, MdCheckCircle } from "react-icons/md";
 import { LuFileText, LuFileX2 } from "react-icons/lu";
 import { useState, useEffect } from "react";
+import { HiChatBubbleLeftRight } from "react-icons/hi2";
 
 const FamiliesList = () => {
     const { role, _id } = useAuth();
@@ -91,6 +92,7 @@ const FamiliesList = () => {
                         </div>
 
                         <div className="family-card-actions">
+                        <Link to={`/dash/conversation/${family._id}`} className="family-card-button"><HiChatBubbleLeftRight size={25} /></Link>
                             <div className={`toggle-button ${family.waiting ? 'on' : 'off'} family-card-button`} onClick={() => { updateFamily({ ...family, id: family._id, waiting: !family.waiting }) }}>
                                 <div className="toggle-circle">{family.waiting ? <MdCheckCircle size={20} /> : <MdCancel size={20} />}</div>
                                 <span className="status-text">{family.waiting ? 'ממתין' : 'לא ממתין'}</span>

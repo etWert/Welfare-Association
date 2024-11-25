@@ -5,6 +5,7 @@ import Search from "../../../components/search/Search";
 import useAuth from "../../../hooks/useAuth";
 import { MdDeleteOutline } from "react-icons/md";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { HiChatBubbleLeftRight } from "react-icons/hi2";
 
 const AdminssList = () => {
     const { role, _id } = useAuth();
@@ -42,12 +43,15 @@ const AdminssList = () => {
                                     <p>פלאפון: {employee.phone}</p>
                                     <p>אימייל: {employee.email}</p>
                                 </div>
-                                {role === 'מנהל' && (
-                                    <div className="employee-card-footer">
-                                        <button onClick={() => { deleteClick(employee) }} className="employee-card-button"><MdDeleteOutline size={27} /></button>
-                                        <Link to={`/dash/admins/${employee._id}`} className="employee-card-button"><FaRegPenToSquare size={22} /></Link>
-                                    </div>
-                                )}
+                                <div className="employee-card-footer">
+                                    <Link to={`/dash/conversation/${employee._id}`} className="employee-card-button"><HiChatBubbleLeftRight size={25} /></Link>
+                                    {role === 'מנהל' && (
+                                        <>
+                                            <button onClick={() => { deleteClick(employee) }} className="employee-card-button"><MdDeleteOutline size={27} /></button>
+                                            <Link to={`/dash/admins/${employee._id}`} className="employee-card-button"><FaRegPenToSquare size={22} /></Link>
+                                        </>
+                                    )}
+                                </div>
                             </div>
                         );
                     }

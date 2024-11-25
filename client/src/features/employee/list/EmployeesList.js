@@ -5,6 +5,7 @@ import Search from "../../../components/search/Search"
 import useAuth from "../../../hooks/useAuth"
 import { FaCirclePlus, FaRegPenToSquare } from "react-icons/fa6";
 import { MdDeleteOutline } from "react-icons/md"
+import { HiChatBubbleLeftRight } from "react-icons/hi2"
 
 
 const EmployeesList = () => {
@@ -45,13 +46,16 @@ const EmployeesList = () => {
                                     <p>פלאפון - {employee.phone}</p>
                                     <p>אימייל - {employee.email}</p>
                                 </div>
-                                {role === 'מנהל' && (
-                                    <div className="employee-card-footer">
-                                        <button onClick={() => { deleteClick(employee) }} className="employee-card-button "><MdDeleteOutline size={27} /></button>
-                                        <Link to={`/dash/employees/${employee._id}`} className="employee-card-button"><FaRegPenToSquare size={22} /></Link>
-                                        <button onClick={() => { updateEmployee({ ...employee, role: "מנהל" }) }} className="employee-card-button">הפוך למנהל</button>
-                                    </div>
-                                )}
+                                <div className="employee-card-footer">
+                                    <Link to={`/dash/conversation/${employee._id}`} className="employee-card-button"><HiChatBubbleLeftRight size={25} /></Link>
+                                    {role === 'מנהל' && (
+                                        <>
+                                            <button onClick={() => { deleteClick(employee) }} className="employee-card-button "><MdDeleteOutline size={27} /></button>
+                                            <Link to={`/dash/employees/${employee._id}`} className="employee-card-button"><FaRegPenToSquare size={22} /></Link>
+                                            <button onClick={() => { updateEmployee({ ...employee, role: "מנהל" }) }} className="employee-card-button">הפוך למנהל</button>
+                                        </>
+                                    )}
+                                </div>
                             </div>
                         )
                     }

@@ -8,6 +8,7 @@ import MenuLink from "./MenuLink";
 import { useSendLogoutMutation } from "../../features/auth/authApiSlice";
 import useAuth from "../../hooks/useAuth";
 import { IoPerson } from "react-icons/io5";
+import { HiChatBubbleLeftRight } from "react-icons/hi2";
 import { BsFillPersonVcardFill } from "react-icons/bs";
 import { IoMdSettings } from "react-icons/io";
 
@@ -76,6 +77,11 @@ const SideBar = () => {
             title: "פרטי נציג",
             path: `/dash/families/employeeDetails`,
             icon: <IoPerson className="icon" />,
+        },
+        {
+            title: "שיחה עם הנציג",
+            path: `/dash/conversation`,
+            icon: <HiChatBubbleLeftRight className="icon" />,
         },
         {
             title: "הגדרות",
