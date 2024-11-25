@@ -16,8 +16,8 @@ const getAllConversation = async (req, res) => {
     })
 }
 const addConversation = async (req, res) => {
-    const { messages, interlocutor_a_id, interlocutor_a_type, interlocutor_b_id, interlocutor_b_type } = req.body
-    if (!interlocutor_a_id || !interlocutor_a_type || !interlocutor_b_id || !interlocutor_b_type) {
+    const { messages, interlocutor_a_id, interlocutor_b_id } = req.body
+    if (!interlocutor_a_id || !interlocutor_b_id) {
         return res.status(400).json({
             error: true,
             message: " חובה להכניס את פרטי המשתתפים בשיחה",
@@ -37,7 +37,8 @@ const addConversation = async (req, res) => {
             data: null
         })
     }
-    const conversation = await Conversation.create({ messages, interlocutor_a_id, interlocutor_a_type, interlocutor_b_id, interlocutor_b_type })
+    const conversation = await Conversation.create({ messages, interlocutor_a_id, interlocutor_b_id })
+    
     if (!conversation) {
         return res.status(404).json({
             error: true,
@@ -73,7 +74,6 @@ const updateConversation = async (req, res) => {
     conversation.messages = messages ? messages : conversation.messages
     
     const newCoversation = await conversation.save()
-
     res.json({
         error: false,
         message: "השיחה עודכנה בהצלחה",
