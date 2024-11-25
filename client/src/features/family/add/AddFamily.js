@@ -11,7 +11,7 @@ const AddFamily = () => {
     const [birthDate, setBirthDate] = useState("");
     const [tuition, setTuition] = useState("");
     const [add, setAdd] = useState(false);
-    const [chi, setChai] = useState([]);
+    const [chi, setChild] = useState([]);
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -27,7 +27,7 @@ const AddFamily = () => {
             birth_date: birthDate,
             tuition: tuition
         };
-        setChai(prevChai => [...prevChai, objChild]);
+        setChild(prevChi => [...prevChi, objChild]);
         setFirstName("");
         setBirthDate("");
         setTuition("");
@@ -40,7 +40,7 @@ const AddFamily = () => {
             }
             return child;
         });
-        setChai(updatedChildren);
+        setChild(updatedChildren);
     };
 
     const formSubmit = (e) => {
