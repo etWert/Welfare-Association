@@ -1,10 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
 import { setToken } from "../features/auth/authSlice"
 
+const BASE_URL=(process.env.NODE_ENV==='development')?process.env.REACT_APP_API_URL:''
+
 const baseQuery = fetchBaseQuery({
-    // baseUrl: "https://server-8dat.onrender.com",
-    baseUrl: "http://localhost:1111",
-//ניתן לעשות ? יף מקוצר
+    baseUrl: `${BASE_URL}`,
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token

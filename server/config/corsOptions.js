@@ -1,7 +1,7 @@
 const allowedOrigins = [
     'http://localhost:3000',
     'http://localhost:5500',
-    'https://welfare-association.onrender.com'
+    'http://localhost:1111',
 ]
 
 const corsOptions = {
