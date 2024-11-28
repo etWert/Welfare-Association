@@ -1,0 +1,105 @@
+.chat-container {
+
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--bgSoft);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.message-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin: 8px 0;
+    gap: 10px;
+}
+
+.message {
+    max-width: 70%;
+    word-wrap: break-word;
+    padding: 12px 16px;
+    border-radius: 20px;
+
+}
+
+.message-wrapper.left {
+    justify-content: flex-end; 
+}
+/* ממקם את התאריך לפני ההודעה */
+.message-wrapper.left .time {
+    order: -1; 
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.message-wrapper.left .message {
+    border-top-left-radius: 0;
+    background-color: rgba(192, 2, 2, 0.119);
+
+}
+
+.message-wrapper.right {
+    justify-content: flex-start; /* הודעות של הצד השני */
+}
+
+.message-wrapper.right .time {
+    order: 1; /* ממקם את התאריך אחרי ההודעה */
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+
+.message-wrapper.right .message {
+    background-color: rgba(7, 11, 65, 0.205);
+    border-top-right-radius: 0;
+
+}
+
+.time {
+    font-size: 10px;
+    color: var(--textSoft);
+    margin: 0 10px;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 8px;
+    border-top: 1px solid var(--textSoft);
+    padding-top: 10px;
+    color: var(--text);
+}
+
+.chat-input-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--bgSoft);
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-input-container button {
+    padding: 10px 20px;
+    background-color: var(--textSoft);
+    color: var(--bg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--bgSoft);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input-container button:hover {
+    background-color: var(--text);
+}
