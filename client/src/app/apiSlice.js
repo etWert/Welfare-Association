@@ -4,7 +4,8 @@ import { setToken } from "../features/auth/authSlice"
 const BASE_URL=(process.env.NODE_ENV==='development')?process.env.REACT_APP_API_URL:''
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: `${BASE_URL}`,
+    // baseUrl: `${BASE_URL}`,
+    baseUrl:'https://server-8dat.onrender.com/',
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token
