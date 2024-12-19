@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { useGetAllFamiliesQuery, useUpdateFamilyMutation } from "../familiesApiSlice";
-import "./FamiliesList.css";
+import "./familiesList.css";
 import Search from "../../../components/search/Search";
 import useGetFilePath from "../../../hooks/useGetFilePath";
 import useAuth from "../../../hooks/useAuth";
