@@ -39,7 +39,7 @@ function App() {
                   <Route path='status' element={< FamilyStatus />} />
                   <Route path='employeeDetails' element={<EmployeeDetails />} />
                 </Route>
-                <Route path='conversation/:user2Id' element={<Conversation />} />
+                <Route path='conversation/:user2Id/:user2Name/:user2Role' element={<Conversation />} />
                 <Route path='settings' element={< Settings />} />
                 <Route path='about' element={<About />} />
                 <Route element={<RequireAuth allowRoles={["מנהל", "נציג"]} />}>
