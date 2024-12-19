@@ -1,15 +1,16 @@
 .side-bar {
-    position: sticky;
-    top: 20px;
+    position: fixed; /* מיקום קבוע יחסית לחלון הדפדפן */
+    top: 0; /* צמוד לחלק העליון */
+    left: 0; /* מתחיל בצד השמאלי */
+    width: 100%; /* תופס את כל רוחב הדפדפן */
+    z-index: 1000; /* כדי שהתפריט יישאר מעל תכנים אחרים */
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--bgSoft);
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
-
 .side-bar-user {
     display: flex;
     align-items: center;

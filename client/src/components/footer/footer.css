@@ -1,21 +1,17 @@
 .footer {
+    position: fixed; /* מיקם את הפוטר ביחס לחלון הדפדפן */
+    bottom: 0; /* הצמדת הפוטר לתחתית */
+    left: 0; /* הצמדת הפוטר לצד שמאל */
+    width: 100%; /* רוחב הפוטר שיתפרס על כל רוחב הדפדפן */
     padding: 20px;
     border-radius: 10px;
     background-color: var(--bgSoft);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     color: var(--textSoft);
     font-weight: bold;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 30px; 
-}
-
-body {
-    padding-bottom: 100px; 
+    z-index: 1000; /* מבטיח שהפוטר יהיה מעל תכנים אחרים */
 }
 
 .footer-menu {

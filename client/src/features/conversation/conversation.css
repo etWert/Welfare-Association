@@ -16,7 +16,7 @@
 .message-wrapper {
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     margin: 8px 0;
     gap: 10px;
 }
@@ -30,11 +30,12 @@
 }
 
 .message-wrapper.left {
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
+
 /* ממקם את התאריך לפני ההודעה */
 .message-wrapper.left .time {
-    order: -1; 
+    order: -1;
     margin-right: 0;
     margin-left: 10px;
 }
@@ -46,11 +47,13 @@
 }
 
 .message-wrapper.right {
-    justify-content: flex-start; /* הודעות של הצד השני */
+    justify-content: flex-start;
+    /* הודעות של הצד השני */
 }
 
 .message-wrapper.right .time {
-    order: 1; /* ממקם את התאריך אחרי ההודעה */
+    order: 1;
+    /* ממקם את התאריך אחרי ההודעה */
     margin-left: 0;
     margin-right: 10px;
 }
@@ -102,4 +105,12 @@
 
 .chat-input-container button:hover {
     background-color: var(--text);
+}
+
+.conversation-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--textSoft);
+    margin-bottom: 20px;
+    text-align: center;
 }
