@@ -92,7 +92,7 @@ const FamiliesList = () => {
                         </div>
 
                         <div className="family-card-actions">
-                        <Link to={`/dash/conversation/${family._id}`} className="family-card-button"><HiChatBubbleLeftRight size={25} /></Link>
+                            {role === 'נציג' && <Link to={`/dash/conversation/${family._id}/${family.name}/משפחת`} className="family-card-button"><HiChatBubbleLeftRight size={25} /></Link>}
                             <div className={`toggle-button ${family.waiting ? 'on' : 'off'} family-card-button`} onClick={() => { updateFamily({ ...family, id: family._id, waiting: !family.waiting }) }}>
                                 <div className="toggle-circle">{family.waiting ? <MdCheckCircle size={20} /> : <MdCancel size={20} />}</div>
                                 <span className="status-text">{family.waiting ? 'ממתין' : 'לא ממתין'}</span>
@@ -104,7 +104,7 @@ const FamiliesList = () => {
                             {family.tzFile ? (
                                 <a href={getFilePath(family.tzFile)} target="_blank" rel="noopener noreferrer" className="family-card-button"><LuFileText size={20} /><span className="file-text">קובץ</span></a>
                             ) : (
-                                <div className="family-card-button"><LuFileX2 size={20}  /><span className="file-text">אין קובץ</span></div>
+                                <div className="family-card-button"><LuFileX2 size={20} /><span className="file-text">אין קובץ</span></div>
                             )}
                             <Link to={`/dash/families/${family._id}`} className="family-card-button"><FaRegPenToSquare size={20} /><span className="edit-text">עדכון</span></Link>
                         </div>

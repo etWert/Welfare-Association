@@ -44,7 +44,7 @@ const AdminssList = () => {
                                     <p>אימייל: {employee.email}</p>
                                 </div>
                                 <div className="employee-card-footer">
-                                    <Link to={`/dash/conversation/${employee._id}/${employee.name}/המנהל`} className="employee-card-button"><HiChatBubbleLeftRight size={25} /></Link>
+                                    <Link to={`/dash/conversation/${employee._id}`} className="employee-card-button"><HiChatBubbleLeftRight size={25} /></Link>
                                     {role === 'מנהל' && (
                                         <>
                                             <button onClick={() => { deleteClick(employee) }} className="employee-card-button"><MdDeleteOutline size={27} /></button>
